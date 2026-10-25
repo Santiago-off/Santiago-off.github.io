@@ -10,7 +10,7 @@
 <meta name="author" content="Santiago Reguero Fernández">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="google-site-verification" content="NzxnmCCrDUKB6UEp4SxkVZCSngtEZ4IZ_gcJddjlzJM">
-<meta name="theme-color" content="#0A080D">
+<meta name="theme-color" content="#0b1f3a">
 
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="es_ES">
@@ -104,151 +104,213 @@
 
 <style>
 :root{
-  --ancho:720px;
-  --fondo:#FBFAFC;
-  --papel:#FFFFFF;
-  --tinta:#16121C;
-  --tinta-media:#4E4658;
-  --tinta-tenue:#6F667A;
-  --linea:#E4DFEA;
-  --linea-fuerte:#CFC7D8;
-  --acento:#D6006B;
-  --acento-suave:#FDF0F6;
-  --verde:#1E7A4F;
-  --serif:Georgia,"Times New Roman",serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  --navy:#0b1f3a; --blue:#1d4f91; --teal:#0f9d8f; --tealtxt:#0b7a70; --mint:#5eead4;
+  --ink:#1f2933; --mute:#566271; --line:#dde5ee; --soft:#f3f7fb;
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --fondo:#0A080D;
-    --papel:#131017;
-    --tinta:#F3EEF7;
-    --tinta-media:#B4A8C0;
-    --tinta-tenue:#847991;
-    --linea:#2A2333;
-    --linea-fuerte:#3B3247;
-    --acento:#FF6BC4;
-    --acento-suave:#1E1424;
-    --verde:#34D382;
-  }
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;color-scheme:light}
 body{
-  margin:0;
-  background:var(--fondo);
-  color:var(--tinta);
-  font-family:var(--sans);
-  font-size:17px;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Calibri,Arial,Helvetica,sans-serif;
+  font-size:16px;line-height:1.55;color:var(--ink);background:#fff;overflow-wrap:break-word;
 }
-.contenedor{max-width:var(--ancho);margin:0 auto;padding:0 24px}
-a{color:var(--acento);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{text-decoration-thickness:2px}
-h1,h2,h3{font-family:var(--serif);font-weight:normal;letter-spacing:-.01em}
-:focus-visible{outline:2px solid var(--acento);outline-offset:3px;border-radius:2px}
-
+a{color:var(--blue);text-underline-offset:3px}
+a:hover{color:var(--navy)}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:3px}
 .saltar{position:absolute;left:-9999px}
-.saltar:focus{left:8px;top:8px;z-index:10;background:var(--papel);padding:10px 16px;border:1px solid var(--linea-fuerte);border-radius:4px}
+.saltar:focus{left:8px;top:8px;z-index:20;background:#fff;color:var(--navy);padding:10px 16px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 
-header.principal{padding:72px 0 0}
-.identidad{padding-top:6px;border-top:3px solid var(--acento);display:inline-block}
-.sobretitulo{
-  margin:14px 0 6px;font-size:12.5px;font-weight:600;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--tinta-tenue);
+/* ---------- CABECERA ---------- */
+.head{
+  color:#fff;padding:36px 0 68px;
+  background:
+    radial-gradient(circle at 93% 8%, rgba(94,234,212,.38) 0, rgba(94,234,212,0) 300px),
+    radial-gradient(circle at 62% 130%, rgba(96,165,250,.40) 0, rgba(96,165,250,0) 440px),
+    linear-gradient(118deg,#0b1f3a 0%,#143f73 100%);
 }
-h1{font-size:clamp(31px,5.5vw,42px);line-height:1.12;margin:0}
-.puesto{margin:8px 0 0;color:var(--tinta-media);font-size:17px}
-.entradilla{
-  font-family:var(--serif);font-size:clamp(20px,3.2vw,24px);line-height:1.5;
-  margin:34px 0 0;color:var(--tinta);
+.head-top{display:flex;align-items:center;gap:34px}
+.foto{
+  width:170px;height:170px;border-radius:50%;overflow:hidden;flex:none;
+  border:3px solid var(--mint);box-shadow:0 0 0 5px rgba(255,255,255,.16);
 }
-.acciones{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-.boton{
-  display:inline-block;padding:9px 17px;border-radius:4px;font-size:15px;
-  border:1px solid var(--linea-fuerte);color:var(--tinta);text-decoration:none;
-  background:var(--papel);
+.foto img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.38);transform-origin:56% 48%}
+.id{flex:1;min-width:0}
+h1{font-size:clamp(28px,5.2vw,44px);font-weight:800;line-height:1.08;letter-spacing:.1px}
+.role{font-size:clamp(16px,2.5vw,20px);font-weight:600;color:var(--mint);margin:6px 0 12px}
+.extracto{font-size:16.5px;line-height:1.55;max-width:64ch}
+.acciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 20px;border-radius:999px;
+  font-size:15px;font-weight:700;text-decoration:none;color:#fff;border:1.5px solid rgba(255,255,255,.6);
 }
-.boton:hover{border-color:var(--acento);color:var(--acento)}
-.boton.principal{background:var(--acento);border-color:var(--acento);color:#fff}
-.boton.principal:hover{opacity:.88;color:#fff}
-@media (prefers-color-scheme: dark){
-  .boton.principal,.boton.principal:hover{color:#0A080D;font-weight:600}
-}
-
-.cifras{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:0;margin:52px 0 0;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);
-}
-.cifra{padding:22px 20px 20px;border-left:1px solid var(--linea)}
-.cifra:first-child{border-left:none;padding-left:0}
-.cifra b{display:block;font-family:var(--serif);font-size:31px;line-height:1.1;font-variant-numeric:tabular-nums}
-.cifra span{display:block;margin-top:5px;font-size:13.5px;color:var(--tinta-tenue);line-height:1.45}
-
-section{padding:56px 0 0}
-h2{
-  font-size:13px;font-family:var(--sans);font-weight:600;text-transform:uppercase;
-  letter-spacing:.12em;color:var(--tinta-tenue);margin:0 0 26px;
-  display:flex;align-items:center;gap:14px;
-}
-h2::after{content:"";flex:1;height:1px;background:var(--linea)}
-p{margin:0 0 18px}
-p:last-child{margin-bottom:0}
-
-.entrada{padding:20px 0;border-top:1px solid var(--linea)}
-.entrada:first-of-type{border-top:none;padding-top:0}
-.entrada h3{font-family:var(--sans);font-size:17px;font-weight:600;margin:0;line-height:1.4}
-.meta{font-size:14.5px;color:var(--tinta-tenue);margin:3px 0 0;font-variant-numeric:tabular-nums}
-.entrada p.detalle{margin:10px 0 0;color:var(--tinta-media);font-size:16px}
-
-.proyecto{padding:24px 0;border-top:1px solid var(--linea)}
-.proyecto:first-of-type{border-top:none;padding-top:4px}
-.proyecto h3{font-family:var(--sans);font-size:17.5px;font-weight:600;margin:0 0 4px}
-.proyecto h3 a{color:var(--tinta);text-decoration:none}
-.proyecto h3 a:hover{color:var(--acento);text-decoration:underline}
-.proyecto .meta{margin-bottom:10px}
-.proyecto p{font-size:16px;color:var(--tinta-media);margin:0 0 12px}
-.pila{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.pila span{
-  font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:3px;
-  background:var(--acento-suave);color:var(--tinta-media);border:1px solid var(--linea);
-}
-.enlaces{font-size:14.5px;display:flex;gap:18px;flex-wrap:wrap}
-
-.grupo{margin-bottom:18px}
-.grupo:last-child{margin-bottom:0}
-.grupo dt{font-size:14px;font-weight:600;color:var(--tinta-tenue);margin-bottom:5px}
-.grupo dd{margin:0;color:var(--tinta-media);font-size:16px}
-
+.btn:hover{background:rgba(255,255,255,.14);color:#fff}
+.btn.principal{background:var(--mint);border-color:var(--mint);color:#06252a}
+.btn.principal:hover{background:#8ff3e3;color:#06252a}
 .contacto{
-  margin-top:56px;padding:30px 28px;background:var(--papel);
-  border:1px solid var(--linea);border-radius:6px;
+  list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:26px;padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.35);font-size:15px;
 }
-.contacto h2{margin-top:0}
-.contacto ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.contacto li{display:flex;gap:12px;font-size:16px}
-.contacto li b{font-weight:600;color:var(--tinta-tenue);min-width:88px;font-size:14px;padding-top:2px}
+.contacto li{display:flex;align-items:center;gap:7px;min-width:0}
+.contacto a{color:#fff}
+.contacto svg{width:16px;height:16px;flex:none;stroke:var(--mint);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 
-footer{
-  margin-top:56px;padding:26px 0 72px;border-top:1px solid var(--linea);
-  font-size:14px;color:var(--tinta-tenue);
+/* ---------- CIFRAS ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:-38px;position:relative}
+.kpi{
+  background:#fff;border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:8px;
+  padding:12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 6px 18px rgba(11,31,58,.08);
+}
+.kpi b{font-size:26px;font-weight:800;color:var(--navy);line-height:1;white-space:nowrap}
+.kpi span{font-size:13px;line-height:1.3;color:var(--mute)}
+
+/* ---------- CUERPO ---------- */
+.cols{display:grid;grid-template-columns:260px minmax(0,1fr);gap:44px;padding:38px 0 24px}
+.cols > aside{grid-column:1;grid-row:1;min-width:0}
+.cols > main{grid-column:2;grid-row:1;min-width:0}
+section{margin-bottom:36px}
+section:last-child{margin-bottom:0}
+h2{
+  font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);
+  padding-bottom:6px;margin-bottom:14px;border-bottom:1.5px solid var(--line);
+  display:flex;align-items:center;gap:8px;
+}
+h2::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--teal);flex:none}
+h2 small{font-size:13px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--mute)}
+p{margin-bottom:12px}
+p:last-child{margin-bottom:0}
+.prosa p{font-size:16.5px;color:#2b3644}
+
+.item{margin-bottom:16px}
+.item:last-child{margin-bottom:0}
+.linea{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:2px 14px}
+.tit{font-weight:700;color:#141c26}
+.ent{color:var(--blue);font-weight:600;font-size:14.5px}
+.fecha{white-space:nowrap;color:var(--mute);font-size:13.5px}
+.nota{font-size:15px;color:var(--mute);margin-top:2px}
+ul.pts{margin:6px 0 0 20px}
+ul.pts li{margin-bottom:3px}
+
+/* proyectos */
+.proyecto{
+  background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:0 8px 8px 0;padding:14px 16px;margin-bottom:14px;
+}
+.proyecto:last-of-type{margin-bottom:0}
+.proyecto h3{font-size:17px;line-height:1.3;color:#141c26}
+.proyecto h3 a{color:#141c26;text-decoration:none}
+.proyecto h3 a:hover{color:var(--blue);text-decoration:underline}
+.proyecto .meta{font-size:13.5px;color:var(--mute);margin:2px 0 8px}
+.proyecto p.txt{font-size:15.5px;color:#2b3644;margin-bottom:10px}
+.proyecto code{font-family:Consolas,"SFMono-Regular",Menlo,monospace;font-size:.9em;background:#fff;border:1px solid var(--line);border-radius:3px;padding:0 4px}
+.enlaces{font-size:14.5px;margin:0}
+.mas{font-size:15px;color:var(--mute);margin-top:16px}
+
+.chip{
+  display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:2px 10px;margin:0 4px 6px 0;font-size:13px;font-weight:600;color:var(--navy);
+}
+.chip.s{background:#e7f6f4;border-color:#bfe6e1;color:#0b6a61}
+.pila{margin-bottom:6px}
+
+/* ---------- LATERAL ---------- */
+.red{display:flex;align-items:center;gap:10px;margin-bottom:9px;font-size:15px;font-weight:600;min-width:0}
+.red a{color:var(--ink);text-decoration:none;min-width:0;overflow-wrap:anywhere}
+.red a:hover{color:var(--blue);text-decoration:underline}
+.b{
+  width:26px;height:26px;border-radius:6px;flex:none;color:#fff;
+  font-size:11px;font-weight:800;letter-spacing:.2px;display:flex;align-items:center;justify-content:center;
+}
+.b.li{background:#0a66c2}
+.b.gh{background:#24292f}
+.b.ig{background:linear-gradient(45deg,#f9a03f,#dd2a7b 55%,#8134af)}
+.b.tt{background:#111;box-shadow:1px 1px 0 #25f4ee,-1px -1px 0 #fe2c55}
+.b.yt{background:#e62117}
+.b.vx{background:#6d28d9}
+.video{
+  display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;padding:8px 10px;
+  background:var(--soft);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--ink);
+}
+.video:hover{border-color:var(--teal)}
+.video svg{width:26px;height:26px;flex:none;margin-top:1px}
+.video .vt{font-weight:700;font-size:14.5px;line-height:1.3;color:#141c26}
+.video .vp{font-size:13px;color:var(--tealtxt);font-weight:600}
+.grupo{margin-bottom:10px}
+.grupo .et{font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.idioma{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px;font-size:15px}
+.idioma .tit{font-size:15px}
+.nivel{font-weight:700;color:var(--blue);font-size:14px;text-align:right}
+
+/* ---------- CERTIFICADOS ---------- */
+.dest{
+  display:flex;gap:14px;align-items:flex-start;margin-bottom:12px;padding:14px 16px;border-radius:10px;
+  color:#e9fff8;text-decoration:none;
+  background:radial-gradient(circle at 96% 10%,rgba(45,212,160,.45) 0,rgba(45,212,160,0) 200px),linear-gradient(120deg,#04231b,#0b4a3a);
+  border:1px solid #1f7a5f;
+}
+.dest:hover{color:#e9fff8;border-color:var(--mint)}
+.dest .ins{
+  flex:none;background:#fbbf24;color:#3b2a00;font-size:11px;font-weight:800;letter-spacing:.8px;
+  padding:3px 9px;border-radius:999px;margin-top:2px;
+}
+.dest .dt{font-size:17px;font-weight:800;line-height:1.25;color:#fff}
+.dest .dm{font-size:14.5px;margin-top:3px}
+.dest .go{font-size:14.5px;font-weight:700;color:var(--mint);margin-top:4px;text-decoration:underline;text-underline-offset:3px}
+.certs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cert{
+  display:block;background:var(--soft);border-left:3px solid var(--teal);border-radius:0 8px 8px 0;
+  padding:9px 12px;text-decoration:none;color:var(--ink);
+}
+.cert:hover{background:#e9f1f8}
+.cert .ct{font-weight:700;font-size:15px;line-height:1.3;color:#141c26}
+.cert .cm{font-size:13.5px;line-height:1.35;color:var(--mute);margin-top:2px}
+.cert .ct::after{
+  content:"";display:inline-block;width:12px;height:12px;margin-left:5px;vertical-align:-1px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f9d8f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4M14 3h7v7M21 3l-10 10'/%3E%3C/svg%3E") no-repeat center/contain;
 }
 
-@media (max-width:560px){
+/* ---------- CIERRE ---------- */
+.cierre{
+  margin-top:28px;color:#fff;padding:34px 0 30px;
+  background:radial-gradient(circle at 8% 0%, rgba(94,234,212,.28) 0, rgba(94,234,212,0) 280px),linear-gradient(118deg,#0b1f3a 0%,#143f73 100%);
+}
+.cierre h2{color:#fff;border-bottom-color:rgba(255,255,255,.3)}
+.cierre ul{list-style:none;display:grid;gap:8px;margin-bottom:18px}
+.cierre li{display:flex;gap:12px;flex-wrap:wrap}
+.cierre li b{min-width:84px;font-size:14px;color:var(--mint);font-weight:700}
+.cierre a:not(.btn){color:#fff}
+.pie{font-size:13.5px;opacity:.85;margin-top:20px}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px){
+  .cols{grid-template-columns:minmax(0,1fr);gap:0}
+  .cols > aside,.cols > main{grid-column:1;grid-row:auto}
+  .cols > aside{margin-top:36px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
   body{font-size:16px}
-  header.principal{padding-top:48px}
-  .cifra{border-left:none;border-top:1px solid var(--linea);padding-left:0}
-  .cifra:first-child{border-top:none}
-  .contacto li{flex-direction:column;gap:2px}
+  .wrap{padding:0 18px}
+  .head{padding:26px 0 60px}
+  .head-top{flex-direction:column;align-items:flex-start;gap:18px}
+  .foto{width:124px;height:124px}
+  .extracto{font-size:16px}
+  .acciones .btn{flex:1 1 auto}
+  .contacto{flex-direction:column;gap:8px}
+  .contacto li{align-items:flex-start}
+  .contacto a{overflow-wrap:anywhere}
+  .kpi{flex-direction:column;align-items:flex-start;gap:6px}
+  .kpi b{font-size:24px}
+  .certs{grid-template-columns:minmax(0,1fr)}
+  .dest{flex-direction:column;gap:8px}
+  .fecha{white-space:normal}
+  .proyecto{padding:12px 13px}
+  .cierre li{flex-direction:column;gap:0}
 }
 @media print{
-  :root{--fondo:#fff;--papel:#fff;--tinta:#000;--tinta-media:#333;--tinta-tenue:#555;--linea:#ccc;--acento:#000}
-  body{font-size:11pt}
-  .acciones,.saltar{display:none}
-  a{text-decoration:none;color:#000}
-  section{padding-top:24px;page-break-inside:avoid}
+  .saltar,.acciones{display:none}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .proyecto,.item,.cert,.dest{break-inside:avoid}
 }
 </style>
 </head>
@@ -256,253 +318,239 @@ footer{
 <body>
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-<div class="contenedor">
-
-<header class="principal">
-  <div class="identidad">
-    <p class="sobretitulo">Madrid, España</p>
-    <h1>Santiago Reguero Fernández</h1>
-    <p class="puesto">Desarrollador full stack · Cofundador de VoltX · Estudiante de DAW</p>
-  </div>
-
-  <p class="entradilla">Tengo 19 años y aún no he terminado el grado, pero llevo años construyendo aplicaciones web reales: paneles con control de acceso, portales que aíslan los datos de cada cliente en la base de datos y herramientas que funcionan en producción. Además soy cofundador de <a href="https://voltx.world">VoltX</a>, un optimizador de PC para gaming con más de 8.000 usuarios, del que llevo la web, la base de datos y la infraestructura.</p>
-
-  <div class="acciones">
-    <a class="boton principal" href="mailto:santiagorfernandezcv@gmail.com">Escríbeme</a>
-    <a class="boton" href="https://github.com/Santiago-off" rel="me">GitHub</a>
-    <a class="boton" href="CV_Visual_Santiago_Reguero_Fernandez.pdf">Currículum (PDF)</a>
-  </div>
-
-  <div class="cifras">
-    <div class="cifra"><b>+10</b><span>proyectos públicos con su código y documentación</span></div>
-    <div class="cifra"><b>3</b><span>aplicaciones web propias funcionando en producción</span></div>
-    <div class="cifra"><b>Italia</b><span>prácticas de desarrollo en el extranjero (2025)</span></div>
-    <div class="cifra"><b>4 años</b><span>dando soporte de hosting (2022–2026)</span></div>
+<header class="head">
+  <div class="wrap">
+    <div class="head-top">
+      <div class="foto"><img src="foto.jpg" width="520" height="520" alt="Santiago Reguero Fernández"></div>
+      <div class="id">
+        <h1>Santiago Reguero Fernández</h1>
+        <p class="role">Desarrollador full stack · Estudiante de DAW</p>
+        <p class="extracto">Tengo 19 años y estudio DAW en DigitechFP (Madrid). Cofundador de VoltX, un producto con más de 8.000 usuarios. Me centro en el backend y los permisos de acceso. Disponible para prácticas presenciales en Madrid.</p>
+        <div class="acciones">
+          <a class="btn principal" href="CV_Visual_Santiago_Reguero_Fernandez.pdf" download>Descargar CV (PDF)</a>
+          <a class="btn" href="mailto:santiagorfernandezcv@gmail.com">Escríbeme</a>
+          <a class="btn" href="https://github.com/Santiago-off" rel="me">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <ul class="contacto">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Madrid, España</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:santiagorfernandezcv@gmail.com">santiagorfernandezcv@gmail.com</a></li>
+    </ul>
   </div>
 </header>
 
+<div class="wrap">
+<div class="kpis" role="list">
+  <div class="kpi" role="listitem"><b>+8.000</b><span>usuarios en VoltX (cofundador)</span></div>
+  <div class="kpi" role="listitem"><b>837</b><span>intentos de bots bloqueados en 6 semanas</span></div>
+  <div class="kpi" role="listitem"><b>475 h</b><span>de Cloud AWS y Azure (UNIR, nota 8,45)</span></div>
+  <div class="kpi" role="listitem"><b>7</b><span>certificados: seguridad, cloud, Python, IA</span></div>
+</div>
+
+<div class="cols">
+
 <main id="contenido">
+  <section id="sobre-mi" class="prosa">
+    <h2>Qué hago</h2>
+    <p>Aún no he terminado el grado, pero llevo años construyendo aplicaciones web reales: paneles con control de acceso, portales que aíslan los datos de cada cliente en la base de datos y herramientas que funcionan en producción.</p>
+    <p>Construyo aplicaciones web <strong>de principio a fin</strong>: la interfaz en React o Next.js, el esquema y los permisos de la base de datos, la lógica de servidor y el despliegue. No me quedo en que «funcione en mi pantalla»; me interesa que aguante en producción.</p>
+    <p>Lo que más me engancha es la <strong>seguridad y el acceso a los datos</strong>: que las comprobaciones de permiso se hagan en el servidor y nunca en lo que diga el navegador, y que cada usuario solo pueda ver lo suyo. He construido paneles multi-rol con auditoría, portales con aislamiento de datos a nivel de fila y varias herramientas de seguridad.</p>
+    <p>En <strong>VoltX</strong> llevo esto a escala de producto: soy cofundador de un optimizador de PC para gaming con más de 8.000 usuarios y me ocupo de su plataforma —la web, la base de datos y sus permisos, los paneles internos, los pagos y la infraestructura—. Respondo de su seguridad en producción, incluido un incidente DDoS real.</p>
+  </section>
 
-<section id="sobre-mi">
-  <h2>Qué hago</h2>
-  <p>Construyo aplicaciones web <strong>de principio a fin</strong>: la interfaz en React o Next.js, el esquema y los permisos de la base de datos, la lógica de servidor y el despliegue. No me quedo en que «funcione en mi pantalla»; me interesa que aguante en producción.</p>
-  <p>Lo que más me engancha es la <strong>seguridad y el acceso a los datos</strong>: que las comprobaciones de permiso se hagan en el servidor y nunca en lo que diga el navegador, y que cada usuario solo pueda ver lo suyo. He construido paneles multi-rol con auditoría, portales con aislamiento de datos a nivel de fila y varias herramientas de seguridad.</p>
-  <p>En <strong>VoltX</strong> llevo esto a escala de producto: soy cofundador de un optimizador de PC para gaming con más de 8.000 usuarios y me ocupo de su plataforma —la web, la base de datos y sus permisos, los paneles internos, los pagos y la infraestructura—. Respondo de su seguridad en producción, incluido un incidente DDoS real.</p>
-</section>
+  <section id="como-trabajo" class="prosa">
+    <h2>Cómo trabajo</h2>
+    <p>Prefiero una herramienta <strong>honesta y auditable</strong> a una que parezca mágica. En mi cifrador de Vigenère documenté por qué ese algoritmo no protege nada real desde que lo rompieron en 1863; en <a href="https://esfraude.pages.dev">¿Es fraude?</a>, cada señal de alerta cita su fuente oficial y la herramienta da «indicios», nunca un veredicto. Prefiero decir lo que una cosa <em>no</em> hace a venderla de más.</p>
+    <p>Y pongo la seguridad en el sitio correcto: el control de permisos va en el servidor y el aislamiento de datos en la propia base de datos, no en el código que corre en el navegador. Documento cada proyecto para que otra persona —o yo dentro de seis meses— pueda entender por qué está hecho así.</p>
+  </section>
 
-<section id="como-trabajo">
-  <h2>Cómo trabajo</h2>
-  <p>Prefiero una herramienta <strong>honesta y auditable</strong> a una que parezca mágica. En mi cifrador de Vigenère documenté por qué ese algoritmo no protege nada real desde que lo rompieron en 1863; en <a href="https://esfraude.pages.dev">¿Es fraude?</a>, cada señal de alerta cita su fuente oficial y la herramienta da «indicios», nunca un veredicto. Prefiero decir lo que una cosa <em>no</em> hace a venderla de más.</p>
-  <p>Y pongo la seguridad en el sitio correcto: el control de permisos va en el servidor y el aislamiento de datos en la propia base de datos, no en el código que corre en el navegador. Documento cada proyecto para que otra persona —o yo dentro de seis meses— pueda entender por qué está hecho así.</p>
-</section>
-
-<section id="proyectos">
-  <h2>Proyectos</h2>
-
-  <article class="proyecto">
-    <h3><a href="https://voltx.world">VoltX — optimizador de PC para gaming</a></h3>
-    <p class="meta">Cofundador · en producción · abr 2026 – actualidad</p>
-    <p>Optimizador de Windows para gaming del que soy cofundador. Me ocupo de la <strong>plataforma</strong>: la web, el esquema y los permisos de la base de datos, los paneles internos de gestión y la infraestructura sobre Cloudflare, incluidas las suscripciones con Stripe que, a través de un Worker, asignan roles y rangos en Discord. La <strong>app de escritorio</strong>, en C#, la desarrolla otra persona del equipo: yo no. Más de 8.000 usuarios.</p>
-    <div class="pila"><span>Next.js</span><span>Supabase · PostgreSQL</span><span>Cloudflare Workers</span><span>Stripe</span></div>
-    <p class="enlaces"><a href="https://voltx.world">voltx.world</a></p>
-  </article>
-
-  <article class="proyecto">
-    <h3><a href="https://github.com/Santiago-off/panelweb.github.io">Panel de soporte multi-rol con auditoría inmutable</a></h3>
-    <p class="meta">sep 2025 – nov 2025 · unas 27.000 líneas</p>
-    <p>Panel de soporte con tres roles —administrador, staff y usuario—, sistema de tickets y registro de auditoría. Lo que más trabajo llevó fueron las reglas de seguridad: el registro de auditoría es de solo escritura y ni un administrador puede modificarlo ni borrarlo, y la comprobación del rol se hace contra el servidor, nunca contra lo que diga el navegador.</p>
-    <div class="pila"><span>React 18</span><span>Firebase</span><span>Firestore Rules</span></div>
-    <p class="enlaces"><a href="https://github.com/Santiago-off/panelweb.github.io">Código y documentación</a></p>
-  </article>
-
-  <article class="proyecto">
-    <h3><a href="https://github.com/Santiago-off/Mad">Portal de clientes con seguridad a nivel de fila</a></h3>
-    <p class="meta">jun 2026 · Proyecto</p>
-    <p>Portal de clientes con ocho tablas y políticas RLS que aíslan los datos de cada cliente en la propia base de datos, no en el código de la aplicación. Resolví una recursión infinita entre políticas —la de «perfiles» consultaba «perfiles»— con una función <code>SECURITY DEFINER</code> que rompe el ciclo.</p>
-    <div class="pila"><span>Next.js 16</span><span>Supabase</span><span>PostgreSQL RLS</span></div>
-    <p class="enlaces"><a href="https://github.com/Santiago-off/Mad">Código y documentación</a></p>
-  </article>
-
-  <article class="proyecto">
-    <h3><a href="https://esfraude.pages.dev">¿Es fraude? — detector de phishing en SMS y emails</a></h3>
-    <p class="meta">septiembre 2026 · Proyecto propio · en producción</p>
-    <p>Web que analiza un SMS o email sospechoso y señala sus indicios de phishing, <strong>100% en el navegador</strong> y sin inteligencia artificial: un motor de reglas basado en los indicadores de INCIBE y la OSI que compara los enlaces con los dominios oficiales reales. Cada señal cita su fuente; da indicios, no veredictos.</p>
-    <div class="pila"><span>JavaScript</span><span>Cloudflare Pages</span><span>Seguridad</span></div>
-    <p class="enlaces"><a href="https://esfraude.pages.dev">esfraude.pages.dev</a></p>
-  </article>
-
-  <article class="proyecto">
-    <h3><a href="https://enredo.pages.dev">Enredo — analizador de red local y foro</a></h3>
-    <p class="meta">septiembre 2026 · Proyecto propio · open source</p>
-    <p>Aplicación que se abre en el navegador pero corre en tu equipo: descubre los dispositivos de tu red, su fabricante y sus puertos, sin privilegios de administrador. Incluye una web con un foro en tiempo real (Cloudflare D1) para comparar redes de forma anónima, con moderación y anti-spam. Junta desarrollo web, redes y seguridad. Desarrollado con asistencia de IA.</p>
-    <div class="pila"><span>Node.js</span><span>Cloudflare Pages · D1</span><span>Redes</span></div>
-    <p class="enlaces"><a href="https://enredo.pages.dev">enredo.pages.dev</a> · <a href="https://github.com/Santiago-off/enredo">Código (MIT)</a></p>
-  </article>
-
-  <article class="proyecto">
-    <h3><a href="https://chataliza.pages.dev">Chataliza — analizador de chats de WhatsApp</a></h3>
-    <p class="meta">septiembre 2026 · Proyecto propio · en producción</p>
-    <p>Web que analiza un chat exportado de WhatsApp <strong>100% en el navegador</strong>: nada se sube a ningún servidor. Parsea los formatos <code>.txt</code> y <code>.zip</code> (este último descomprimido en el navegador sin librerías), calcula las estadísticas y genera una tarjeta para compartir.</p>
-    <div class="pila"><span>JavaScript</span><span>HTML y CSS</span><span>Cloudflare Pages</span></div>
-    <p class="enlaces"><a href="https://chataliza.pages.dev">chataliza.pages.dev</a> · <a href="https://github.com/Santiago-off/chataliza">Código (MIT)</a></p>
-  </article>
-
-  <article class="proyecto">
-    <h3><a href="https://github.com/Santiago-off/Panelcentral">Panel central para administrar varias webs</a></h3>
-    <p class="meta">nov 2025 · Proyecto personal</p>
-    <p>Panel único para gestionar varios sitios a la vez: un agente en JavaScript se inyecta en cada sitio gestionado y recibe órdenes desde el panel a través de seis funciones serverless.</p>
-    <div class="pila"><span>TypeScript</span><span>Netlify Functions</span><span>Firebase</span></div>
-    <p class="enlaces"><a href="https://github.com/Santiago-off/Panelcentral">Código y documentación</a></p>
-  </article>
-
-  <article class="proyecto">
-    <h3><a href="https://github.com/Santiago-off/Encryptator">Cifrado de Vigenère implementado a mano</a></h3>
-    <p class="meta">sep 2025 · Ejercicio de algoritmia</p>
-    <p>Cifrador web con el algoritmo escrito desde cero, sin librerías de criptografía: alfabeto de 27 caracteres, flujo de clave y corrección del índice negativo al descifrar. La documentación explica también por qué este cifrado no protege nada real desde que Kasiski lo rompió en 1863.</p>
-    <div class="pila"><span>React 19</span><span>JavaScript</span></div>
-    <p class="enlaces"><a href="https://github.com/Santiago-off/Encryptator">Código y documentación</a></p>
-  </article>
-
-  <article class="proyecto">
-    <h3><a href="https://github.com/Santiago-off/File-Integrity-Monitor">Monitor de integridad de ficheros</a></h3>
-    <p class="meta">sep 2025 – ene 2026 · Proyecto personal</p>
-    <p>Herramienta de escritorio que detecta cambios en los ficheros de un equipo comparando huellas SHA-256 entre exploraciones, y distingue lo añadido, lo borrado y lo modificado. Los ficheros se leen en bloques de 64 KB para trabajar con archivos grandes sin cargarlos enteros en memoria.</p>
-    <div class="pila"><span>Python</span><span>Tkinter</span><span>SHA-256</span></div>
-    <p class="enlaces"><a href="https://github.com/Santiago-off/File-Integrity-Monitor">Código y documentación</a></p>
-  </article>
-
-  <p style="margin-top:26px;font-size:15.5px;color:var(--tinta-tenue)">Todos mis proyectos publicados están en <a href="https://github.com/Santiago-off">github.com/Santiago-off</a>.</p>
-</section>
-
-<section id="experiencia">
-  <h2>Experiencia</h2>
-
-  <div class="entrada">
-    <h3>Cofundador — VoltX</h3>
-    <p class="meta">abr 2026 – actualidad</p>
-    <p class="detalle">Optimizador de PC para gaming. Responsable de la plataforma web, del esquema y los permisos de la base de datos (Supabase y PostgreSQL), de los paneles internos, de los pagos con Stripe y de la infraestructura sobre Cloudflare, y de su seguridad en producción. No desarrollo la app de escritorio.</p>
-  </div>
-
-  <div class="entrada">
-    <h3>Programador — Armonia</h3>
-    <p class="meta">marzo – junio 2025 · Salerno, Italia</p>
-    <p class="detalle">Prácticas de desarrollo realizadas en el extranjero durante el grado medio.</p>
-  </div>
-
-  <div class="entrada">
-    <h3>Soporte de hosting</h3>
-    <p class="meta">mayo 2022 – ago 2026 · En remoto</p>
-    <p class="detalle">Atención y resolución de incidencias de alojamiento web para clientes.</p>
-  </div>
-</section>
-
-<section id="formacion">
-  <h2>Formación</h2>
-
-  <div class="entrada">
-    <h3>Desarrollo de Aplicaciones Web — DigitechFP</h3>
-    <p class="meta">sep 2025 – actualidad · Grado superior · Madrid</p>
-    <p class="detalle">Busco empresa para las prácticas (FCT), presenciales en Madrid.</p>
-  </div>
-
-  <div class="entrada">
-    <h3>Sistemas Microinformáticos y Redes — Santa Gema Galgani</h3>
-    <p class="meta">sep 2023 – jun 2025 · Grado medio · Madrid</p>
-  </div>
-
-  <div class="entrada">
-    <h3>Experto Universitario en Cloud Computing: Arquitecturas y Soluciones (AWS y Azure)</h3>
-    <p class="meta">Universidad Internacional de La Rioja (UNIR) · feb – oct 2023 · 475 h / 19 ECTS · Notable (8,45)</p>
-  </div>
-
-  <div class="entrada">
-    <h3>Introducción a la Ciberseguridad · Fundamentos de Python</h3>
-    <p class="meta">Cisco Networking Academy</p>
-  </div>
-
-  <div class="entrada">
-    <h3>Piloto de drones A1/A3, A2 y STS-01/STS-02</h3>
-    <p class="meta">AESA (Agencia Estatal de Seguridad Aérea) y Bai Escuela de Drones</p>
-  </div>
-</section>
-
-<section id="certificados">
-  <h2>Certificados</h2>
-
-  <div class="entrada">
-    <h3>Hacking Ético: de 0 a Hackear Aplicaciones</h3>
-    <p class="meta">BIG school · 6 horas · 23 oct 2026 · con Chema Alonso (sesiones sobre IA) · certificado de asistencia</p>
-    <p class="detalle"><a href="certificados/bigschool-hacking-etico-2026-10-23.pdf" aria-label="Certificado de BIG school: Hacking Ético (PDF)">Abrir certificado (PDF)</a></p>
-  </div>
-
-  <div class="entrada">
-    <h3>Introducción a la Ciberseguridad</h3>
-    <p class="meta">Cisco Networking Academy · 22 sep 2025</p>
-    <p class="detalle"><a href="certificados/cisco-introduccion-ciberseguridad-2025-09-22.pdf" aria-label="Certificado de Cisco: Introducción a la Ciberseguridad (PDF)">Abrir certificado (PDF)</a></p>
-  </div>
-
-  <div class="entrada">
-    <h3>Fundamentos de Python 1</h3>
-    <p class="meta">Cisco Networking Academy · 29 nov 2024</p>
-    <p class="detalle"><a href="certificados/cisco-fundamentos-python-1-2024-11-29.pdf" aria-label="Certificado de Cisco: Fundamentos de Python 1 (PDF)">Abrir certificado (PDF)</a></p>
-  </div>
-
-  <div class="entrada">
-    <h3>Google: Inteligencia Artificial y productividad</h3>
-    <p class="meta">Santander Open Academy · 2 horas · 4 may 2025</p>
-    <p class="detalle"><a href="certificados/santander-google-ia-productividad-2025-05-04.pdf" aria-label="Certificado de Santander Open Academy: Google, Inteligencia Artificial y productividad (PDF)">Abrir certificado (PDF)</a></p>
-  </div>
-
-  <div class="entrada">
-    <h3>Piloto a distancia de drones (A1/A3 y A2)</h3>
-    <p class="meta">AESA · válido hasta 25 ago 2030</p>
-    <p class="detalle"><a href="certificados/aesa-piloto-a-distancia.pdf" aria-label="Certificado de AESA: piloto a distancia de drones (PDF)">Abrir certificado (PDF)</a></p>
-  </div>
-
-  <div class="entrada">
-    <h3>Ciberseguridad personal</h3>
-    <p class="meta">Backtrack Academy · 12 ene 2021</p>
-    <p class="detalle"><a href="certificados/backtrack-ciberseguridad-personal-2021-01-12.pdf" aria-label="Certificado de Backtrack Academy: Ciberseguridad personal (PDF)">Abrir certificado (PDF)</a></p>
-  </div>
-</section>
-
-<section id="competencias">
-  <h2>Competencias</h2>
-  <dl>
-    <div class="grupo">
-      <dt>Desarrollo</dt>
-      <dd>React · Next.js · TypeScript · JavaScript · Node · Python · HTML y CSS</dd>
+  <section id="experiencia">
+    <h2>Experiencia</h2>
+    <div class="item">
+      <div class="linea"><span class="tit">Cofundador · VoltX <a class="ent" href="https://voltx.world">· voltx.world</a></span><span class="fecha">abr 2026 – actualidad</span></div>
+      <div class="nota" style="margin-bottom:0">Optimizador de PC para gaming. Me ocupo de la plataforma; no desarrollo la app de escritorio.</div>
+      <ul class="pts">
+        <li>Web, base de datos (Supabase / PostgreSQL) y permisos de acceso.</li>
+        <li>Infraestructura y paneles internos en Cloudflare.</li>
+        <li>Detección propia de bots: 837 intentos bloqueados en 6 semanas.</li>
+      </ul>
     </div>
-    <div class="grupo">
-      <dt>Datos e infraestructura</dt>
-      <dd>PostgreSQL · Supabase (Auth, RLS, Edge Functions) · Firebase y Firestore · Cloudflare (Pages, Workers, D1) · Netlify · Git</dd>
+    <div class="item">
+      <div class="linea"><span class="tit">Programador en prácticas <span class="ent">· Armonia, Salerno (Italia)</span></span><span class="fecha">mar – jun 2025</span></div>
+      <div>Prácticas de desarrollo en equipo y en italiano, durante el grado medio.</div>
     </div>
-    <div class="grupo">
-      <dt>Seguridad</dt>
-      <dd>Control de acceso en el servidor · Aislamiento de datos (RLS y reglas) · Criptografía básica · Integridad de ficheros (SHA-256) · Detección de phishing · Análisis de red</dd>
+    <div class="item">
+      <div class="linea"><span class="tit">Soporte de hosting <span class="ent">· en remoto</span></span><span class="fecha">may 2022 – ago 2026</span></div>
+      <div>Incidencias de hosting: dominios, correo, certificados y despliegues.</div>
     </div>
-    <div class="grupo">
-      <dt>Idiomas</dt>
-      <dd>Inglés básico (lectura y conversación) · Italiano (A2)</dd>
-    </div>
-  </dl>
-</section>
+  </section>
 
-<section class="contacto" id="contacto">
-  <h2>Contacto</h2>
-  <ul>
-    <li><b>Correo</b><a href="mailto:santiagorfernandezcv@gmail.com">santiagorfernandezcv@gmail.com</a></li>
-    <li><b>GitHub</b><a href="https://github.com/Santiago-off" rel="me">github.com/Santiago-off</a></li>
-    <li><b>Ubicación</b><span>Madrid, España · prácticas presenciales</span></li>
-  </ul>
-</section>
+  <section id="formacion">
+    <h2>Formación</h2>
+    <div class="item">
+      <div class="linea"><span class="tit">Desarrollo de Aplicaciones Web (DAW)</span><span class="fecha">sep 2025 – actualidad</span></div>
+      <div class="ent">Grado superior · DigitechFP, Madrid</div>
+      <div class="nota">Busco empresa para las prácticas (FCT), presenciales en Madrid.</div>
+    </div>
+    <div class="item">
+      <div class="linea"><span class="tit">Sistemas Microinformáticos y Redes</span><span class="fecha">sep 2023 – jun 2025</span></div>
+      <div class="ent">Grado medio · Santa Gema Galgani, Madrid</div>
+    </div>
+    <div class="item">
+      <div class="linea"><span class="tit">Piloto de drones: A1/A3, A2 y STS-01/STS-02</span></div>
+      <div class="ent">AESA y Bai Escuela de Drones</div>
+    </div>
+  </section>
 
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <article class="proyecto">
+      <h3><a href="https://voltx.world">VoltX — optimizador de PC para gaming</a></h3>
+      <p class="meta">Cofundador · en producción · abr 2026 – actualidad</p>
+      <p class="txt">Optimizador de Windows para gaming del que soy cofundador. Me ocupo de la <strong>plataforma</strong>: la web, el esquema y los permisos de la base de datos, los paneles internos de gestión y la infraestructura sobre Cloudflare, incluidas las suscripciones con Stripe que, a través de un Worker, asignan roles y rangos en Discord. La <strong>app de escritorio</strong>, en C#, la desarrolla otra persona del equipo: yo no. Más de 8.000 usuarios.</p>
+      <div class="pila"><span class="chip">Next.js</span><span class="chip">Supabase · PostgreSQL</span><span class="chip">Cloudflare Workers</span><span class="chip">Stripe</span></div>
+      <p class="enlaces"><a href="https://voltx.world">voltx.world</a></p>
+    </article>
+    <article class="proyecto">
+      <h3><a href="https://github.com/Santiago-off/panelweb.github.io">Panel de soporte multi-rol con auditoría inmutable</a></h3>
+      <p class="meta">sep 2025 – nov 2025 · unas 27.000 líneas</p>
+      <p class="txt">Panel de soporte con tres roles —administrador, staff y usuario—, sistema de tickets y registro de auditoría. Lo que más trabajo llevó fueron las reglas de seguridad: el registro de auditoría es de solo escritura y ni un administrador puede modificarlo ni borrarlo, y la comprobación del rol se hace contra el servidor, nunca contra lo que diga el navegador.</p>
+      <div class="pila"><span class="chip">React 18</span><span class="chip">Firebase</span><span class="chip">Firestore Rules</span></div>
+      <p class="enlaces"><a href="https://github.com/Santiago-off/panelweb.github.io">Código y documentación</a></p>
+    </article>
+    <article class="proyecto">
+      <h3><a href="https://github.com/Santiago-off/Mad">Portal de clientes con seguridad a nivel de fila</a></h3>
+      <p class="meta">jun 2026 · Proyecto</p>
+      <p class="txt">Portal de clientes con ocho tablas y políticas RLS que aíslan los datos de cada cliente en la propia base de datos, no en el código de la aplicación. Resolví una recursión infinita entre políticas —la de «perfiles» consultaba «perfiles»— con una función <code>SECURITY DEFINER</code> que rompe el ciclo.</p>
+      <div class="pila"><span class="chip">Next.js 16</span><span class="chip">Supabase</span><span class="chip">PostgreSQL RLS</span></div>
+      <p class="enlaces"><a href="https://github.com/Santiago-off/Mad">Código y documentación</a></p>
+    </article>
+    <article class="proyecto">
+      <h3><a href="https://esfraude.pages.dev">¿Es fraude? — detector de phishing en SMS y emails</a></h3>
+      <p class="meta">septiembre 2026 · Proyecto propio · en producción</p>
+      <p class="txt">Web que analiza un SMS o email sospechoso y señala sus indicios de phishing, <strong>100% en el navegador</strong> y sin inteligencia artificial: un motor de reglas basado en los indicadores de INCIBE y la OSI que compara los enlaces con los dominios oficiales reales. Cada señal cita su fuente; da indicios, no veredictos.</p>
+      <div class="pila"><span class="chip">JavaScript</span><span class="chip">Cloudflare Pages</span><span class="chip">Seguridad</span></div>
+      <p class="enlaces"><a href="https://esfraude.pages.dev">esfraude.pages.dev</a></p>
+    </article>
+    <article class="proyecto">
+      <h3><a href="https://enredo.pages.dev">Enredo — analizador de red local y foro</a></h3>
+      <p class="meta">septiembre 2026 · Proyecto propio · open source</p>
+      <p class="txt">Aplicación que se abre en el navegador pero corre en tu equipo: descubre los dispositivos de tu red, su fabricante y sus puertos, sin privilegios de administrador. Incluye una web con un foro en tiempo real (Cloudflare D1) para comparar redes de forma anónima, con moderación y anti-spam. Junta desarrollo web, redes y seguridad. Desarrollado con asistencia de IA.</p>
+      <div class="pila"><span class="chip">Node.js</span><span class="chip">Cloudflare Pages · D1</span><span class="chip">Redes</span></div>
+      <p class="enlaces"><a href="https://enredo.pages.dev">enredo.pages.dev</a> · <a href="https://github.com/Santiago-off/enredo">Código (MIT)</a></p>
+    </article>
+    <article class="proyecto">
+      <h3><a href="https://chataliza.pages.dev">Chataliza — analizador de chats de WhatsApp</a></h3>
+      <p class="meta">septiembre 2026 · Proyecto propio · en producción</p>
+      <p class="txt">Web que analiza un chat exportado de WhatsApp <strong>100% en el navegador</strong>: nada se sube a ningún servidor. Parsea los formatos <code>.txt</code> y <code>.zip</code> (este último descomprimido en el navegador sin librerías), calcula las estadísticas y genera una tarjeta para compartir.</p>
+      <div class="pila"><span class="chip">JavaScript</span><span class="chip">HTML y CSS</span><span class="chip">Cloudflare Pages</span></div>
+      <p class="enlaces"><a href="https://chataliza.pages.dev">chataliza.pages.dev</a> · <a href="https://github.com/Santiago-off/chataliza">Código (MIT)</a></p>
+    </article>
+    <article class="proyecto">
+      <h3><a href="https://github.com/Santiago-off/Panelcentral">Panel central para administrar varias webs</a></h3>
+      <p class="meta">nov 2025 · Proyecto personal</p>
+      <p class="txt">Panel único para gestionar varios sitios a la vez: un agente en JavaScript se inyecta en cada sitio gestionado y recibe órdenes desde el panel a través de seis funciones serverless.</p>
+      <div class="pila"><span class="chip">TypeScript</span><span class="chip">Netlify Functions</span><span class="chip">Firebase</span></div>
+      <p class="enlaces"><a href="https://github.com/Santiago-off/Panelcentral">Código y documentación</a></p>
+    </article>
+    <article class="proyecto">
+      <h3><a href="https://github.com/Santiago-off/Encryptator">Cifrado de Vigenère implementado a mano</a></h3>
+      <p class="meta">sep 2025 · Ejercicio de algoritmia</p>
+      <p class="txt">Cifrador web con el algoritmo escrito desde cero, sin librerías de criptografía: alfabeto de 27 caracteres, flujo de clave y corrección del índice negativo al descifrar. La documentación explica también por qué este cifrado no protege nada real desde que Kasiski lo rompió en 1863.</p>
+      <div class="pila"><span class="chip">React 19</span><span class="chip">JavaScript</span></div>
+      <p class="enlaces"><a href="https://github.com/Santiago-off/Encryptator">Código y documentación</a></p>
+    </article>
+    <article class="proyecto">
+      <h3><a href="https://github.com/Santiago-off/File-Integrity-Monitor">Monitor de integridad de ficheros</a></h3>
+      <p class="meta">sep 2025 – ene 2026 · Proyecto personal</p>
+      <p class="txt">Herramienta de escritorio que detecta cambios en los ficheros de un equipo comparando huellas SHA-256 entre exploraciones, y distingue lo añadido, lo borrado y lo modificado. Los ficheros se leen en bloques de 64 KB para trabajar con archivos grandes sin cargarlos enteros en memoria.</p>
+      <div class="pila"><span class="chip">Python</span><span class="chip">Tkinter</span><span class="chip">SHA-256</span></div>
+      <p class="enlaces"><a href="https://github.com/Santiago-off/File-Integrity-Monitor">Código y documentación</a></p>
+    </article>
+    <p class="mas">Todos mis proyectos publicados están en <a href="https://github.com/Santiago-off">github.com/Santiago-off</a>.</p>
+  </section>
+
+  <section id="certificados">
+    <h2>Certificados <small>· pulsa para abrir</small></h2>
+    <a class="dest" href="certificados/bigschool-hacking-etico-2026-10-23.pdf">
+      <span class="ins">NUEVO</span>
+      <div>
+        <div class="dt">Hacking Ético: de 0 a Hackear Aplicaciones</div>
+        <div class="dm">BIG school · 6 horas · 23 oct 2026 · con Chema Alonso (sesiones sobre IA) · certificado de asistencia</div>
+        <div class="go">Abrir certificado (PDF)</div>
+      </div>
+    </a>
+    <div class="certs">
+    <a class="cert" href="https://verifirma.unir.net/CSV/c0625605-755f-490c-852d-548188fb0c49"><div class="ct">Experto Universitario en Cloud Computing (AWS y Azure)</div><div class="cm">UNIR · título propio · 475 h / 19 ECTS · nota 8,45 · feb–oct 2023 · verificar en UNIR</div></a>
+    <a class="cert" href="certificados/cisco-introduccion-ciberseguridad-2025-09-22.pdf"><div class="ct">Introducción a la Ciberseguridad</div><div class="cm">Cisco Networking Academy · 22 sep 2025</div></a>
+    <a class="cert" href="certificados/cisco-fundamentos-python-1-2024-11-29.pdf"><div class="ct">Fundamentos de Python 1</div><div class="cm">Cisco Networking Academy · 29 nov 2024</div></a>
+    <a class="cert" href="certificados/santander-google-ia-productividad-2025-05-04.pdf"><div class="ct">Google: Inteligencia Artificial y productividad</div><div class="cm">Santander Open Academy · 2 h · 4 may 2025</div></a>
+    <a class="cert" href="certificados/aesa-piloto-a-distancia.pdf"><div class="ct">Piloto a distancia de drones (A1/A3 y A2)</div><div class="cm">AESA · válido hasta 25 ago 2030</div></a>
+    <a class="cert" href="certificados/backtrack-ciberseguridad-personal-2021-01-12.pdf"><div class="ct">Ciberseguridad personal</div><div class="cm">Backtrack Academy · 12 ene 2021</div></a>
+    </div>
+  </section>
 </main>
 
-<footer>
-  <p>Santiago Reguero Fernández — Madrid, España. Las cifras de esta página salen del historial público de mis repositorios y de mis aplicaciones en producción.</p>
-</footer>
+<aside>
+  <section id="redes">
+    <h2>Redes y canales</h2>
+    <div class="red"><span class="b li" aria-hidden="true">in</span><a href="https://www.linkedin.com/in/santiago-reguero-fernandez">in/santiago-reguero-fernandez</a></div>
+    <div class="red"><span class="b gh" aria-hidden="true">GH</span><a href="https://github.com/Santiago-off">github.com/Santiago-off</a></div>
+    <div class="red"><span class="b ig" aria-hidden="true">IG</span><a href="https://www.instagram.com/santiagorfer">@santiagorfer</a></div>
+    <div class="red"><span class="b tt" aria-hidden="true">TT</span><a href="https://www.tiktok.com/@santiagorfoff">@santiagorfoff</a></div>
+    <div class="red"><span class="b yt" aria-hidden="true">YT</span><a href="https://www.youtube.com/channel/UCduNhqsbJAnlUxpwcamI_6w">@santiagoreguero</a></div>
+    <div class="red"><span class="b vx" aria-hidden="true">VX</span><a href="https://voltx.world">voltx.world</a></div>
+  </section>
+
+  <section id="videos">
+    <h2>Vídeos</h2>
+    <a class="video" href="https://www.instagram.com/reel/Dcaed89iNVA/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0f9d8f"/><path d="M9.5 7.5v9l7.5-4.5z" fill="#fff"/></svg><div><div class="vt">4 comandos de Git para cuando la has liado</div><div class="vp">Reel · Instagram</div></div></a>
+    <a class="video" href="https://www.instagram.com/reel/Dci5vzsMNKE/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0f9d8f"/><path d="M9.5 7.5v9l7.5-4.5z" fill="#fff"/></svg><div><div class="vt">Dos ataques contra mi web en 26 horas</div><div class="vp">Reel · Instagram</div></div></a>
+    <a class="video" href="https://www.instagram.com/reel/DdW4UQViPvA/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0f9d8f"/><path d="M9.5 7.5v9l7.5-4.5z" fill="#fff"/></svg><div><div class="vt">Puse rutas trampa en mi web: en 6 semanas cayeron 837 bots</div><div class="vp">Reel · Instagram</div></div></a>
+    <p class="mas">Más en <a href="https://www.tiktok.com/@santiagorfoff">TikTok</a> y <a href="https://www.youtube.com/channel/UCduNhqsbJAnlUxpwcamI_6w">YouTube</a>.</p>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="grupo"><div class="et">Lenguajes</div>
+      <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">PHP</span><span class="chip">SQL</span><span class="chip">Python</span></div>
+    <div class="grupo"><div class="et">Frameworks</div>
+      <span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Node.js</span></div>
+    <div class="grupo"><div class="et">Bases de datos</div>
+      <span class="chip">MySQL</span><span class="chip">PostgreSQL (Supabase)</span><span class="chip">Firebase / Firestore</span><span class="chip">Cloudflare D1</span></div>
+    <div class="grupo"><div class="et">Herramientas</div>
+      <span class="chip">Cloudflare (Pages, Workers)</span><span class="chip">Git y GitHub</span><span class="chip">Stripe</span><span class="chip">Netlify</span></div>
+    <div class="grupo"><div class="et">Seguridad</div>
+      <span class="chip s">RLS</span><span class="chip s">Control de acceso en el servidor</span><span class="chip s">Detección de bots</span><span class="chip s">Respuesta a incidentes</span><span class="chip s">Integridad de ficheros (SHA-256)</span><span class="chip s">Detección de phishing</span><span class="chip s">Análisis de red</span></div>
+  </section>
+
+  <section id="idiomas">
+    <h2>Idiomas</h2>
+    <div class="idioma"><span class="tit">Inglés</span><span class="nivel">básico (lectura y conversación)</span></div>
+    <div class="idioma"><span class="tit">Italiano</span><span class="nivel">A2</span></div>
+  </section>
+
+</aside>
 
 </div>
+</div>
+
+<footer class="cierre" id="contacto">
+  <div class="wrap">
+    <h2>Contacto</h2>
+    <ul>
+      <li><b>Correo</b><a href="mailto:santiagorfernandezcv@gmail.com">santiagorfernandezcv@gmail.com</a></li>
+      <li><b>GitHub</b><a href="https://github.com/Santiago-off" rel="me">github.com/Santiago-off</a></li>
+      <li><b>Ubicación</b><span>Madrid, España · prácticas presenciales</span></li>
+    </ul>
+    <div class="acciones">
+      <a class="btn principal" href="CV_Visual_Santiago_Reguero_Fernandez.pdf" download>Descargar CV (PDF)</a>
+      <a class="btn" href="mailto:santiagorfernandezcv@gmail.com">Escríbeme</a>
+    </div>
+    <p class="pie">Santiago Reguero Fernández — Madrid, España.</p>
+  </div>
+</footer>
+
 </body>
 </html>
