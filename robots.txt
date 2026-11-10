@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://santiago-off.github.io/sitemap.xml
+Sitemap: https://santiagorf.com/sitemap.xml
