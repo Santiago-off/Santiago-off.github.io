@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Política de privacidad — santiagorf.com</title>
+<meta name="description" content="Política de privacidad de santiagorf.com: sin cookies ni rastreo, solo un contador de visitas agregado. Qué guarda, cuánto tiempo y cómo ejercer tus derechos.">
+<link rel="canonical" href="https://santiagorf.com/privacidad/">
+<meta name="author" content="Santiago Reguero Fernández">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b1f3a">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Santiago Reguero Fernández">
+<meta property="og:title" content="Política de privacidad — santiagorf.com">
+<meta property="og:description" content="Sin cookies ni rastreo: solo un contador de visitas agregado. Qué guarda, cuánto tiempo y cómo ejercer tus derechos.">
+<meta property="og:url" content="https://santiagorf.com/privacidad/">
+<meta property="og:image" content="https://santiagorf.com/og.png">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A080D'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='%23FF14AC'>S</text></svg>">
+
+<style>
+:root{
+  --navy:#0b1f3a; --blue:#1d4f91; --teal:#0f9d8f; --tealtxt:#0b7a70; --mint:#5eead4;
+  --ink:#1f2933; --mute:#566271; --line:#dde5ee; --soft:#f3f7fb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none !important}
+html{-webkit-text-size-adjust:100%;color-scheme:light}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Calibri,Arial,Helvetica,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:#fff;overflow-wrap:break-word;
+}
+a{color:var(--blue);text-underline-offset:3px}
+a:hover{color:var(--navy)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:3px}
+.saltar{position:absolute;left:-9999px}
+.saltar:focus{left:8px;top:8px;z-index:40;background:#fff;color:var(--navy);padding:10px 16px;border-radius:6px}
+.wrap{max-width:880px;margin:0 auto;padding:0 28px}
+
+.head{
+  color:#fff;padding:22px 0 34px;
+  background:
+    radial-gradient(circle at 93% 8%, rgba(94,234,212,.38) 0, rgba(94,234,212,0) 300px),
+    radial-gradient(circle at 62% 130%, rgba(96,165,250,.40) 0, rgba(96,165,250,0) 440px),
+    linear-gradient(118deg,#0b1f3a 0%,#143f73 100%);
+}
+.volver{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-size:15px;font-weight:700;text-decoration:none}
+.volver:hover{color:var(--mint);text-decoration:underline}
+h1{font-size:clamp(26px,4.8vw,40px);font-weight:800;line-height:1.1;letter-spacing:.1px;margin-top:8px}
+.sub{font-size:clamp(15px,2.3vw,18px);font-weight:600;color:var(--mint);margin-top:6px}
+.fechado{font-size:15px;margin-top:10px}
+.idiomas{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,.35);font-size:15px;font-weight:600}
+.idiomas a{display:inline-flex;align-items:center;min-height:36px;color:#fff}
+
+main{padding:36px 0 8px}
+.doc{margin-bottom:46px}
+.doc + .doc{padding-top:38px;border-top:3px solid var(--line)}
+.doc-t{font-size:clamp(24px,4vw,32px);font-weight:800;line-height:1.15;color:var(--navy)}
+.doc-f{font-size:15px;color:var(--mute);margin:6px 0 0}
+.es h2,.en h3{
+  font-size:19px;font-weight:800;line-height:1.3;color:var(--navy);
+  margin:30px 0 12px;padding-bottom:6px;border-bottom:1.5px solid var(--line);
+  display:flex;align-items:center;gap:9px;scroll-margin-top:16px;
+}
+.es h2::before,.en h3::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--teal);flex:none}
+.es h3,.en h4{font-size:16.5px;font-weight:700;color:#141c26;margin:20px 0 8px;scroll-margin-top:16px}
+p{margin-bottom:12px;color:#2b3644}
+ul,ol{margin:0 0 14px 22px;color:#2b3644}
+li{margin-bottom:5px}
+code{font-family:Consolas,"SFMono-Regular",Menlo,monospace;font-size:.9em;background:var(--soft);border:1px solid var(--line);border-radius:3px;padding:0 4px}
+.resumen{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 8px 8px 0;padding:14px 18px 6px;margin-top:8px}
+.resumen ul{margin-bottom:8px}
+.tabla{overflow-x:auto;margin:0 0 16px;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.5}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--soft);color:var(--navy);font-weight:700}
+tbody tr:last-child td{border-bottom:0}
+td + td,th + th{border-left:1px solid var(--line)}
+
+.cierre{
+  margin-top:20px;color:#fff;padding:26px 0 28px;
+  background:radial-gradient(circle at 8% 0%, rgba(94,234,212,.28) 0, rgba(94,234,212,0) 280px),linear-gradient(118deg,#0b1f3a 0%,#143f73 100%);
+}
+.cierre a{color:#fff}
+.legal{display:flex;flex-wrap:wrap;gap:4px 24px;font-size:15px;font-weight:600}
+.legal a{display:inline-flex;align-items:center;min-height:36px}
+.pie{font-size:13.5px;opacity:.85;margin:10px 0 0;color:#fff}
+
+.aviso-priv{
+  position:fixed;left:16px;right:16px;bottom:16px;z-index:30;max-width:580px;margin:0 auto;
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;
+  background:#fff;color:var(--ink);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;
+  padding:14px 16px;box-shadow:0 10px 30px rgba(11,31,58,.22);font-size:14.5px;line-height:1.45;
+}
+.aviso-priv p{flex:1 1 280px;margin:0;color:var(--ink)}
+.aviso-priv button{
+  flex:none;min-height:44px;padding:8px 20px;border-radius:999px;border:1.5px solid var(--navy);
+  background:var(--navy);color:#fff;font:inherit;font-size:15px;font-weight:700;cursor:pointer;
+}
+.aviso-priv button:hover{background:#143f73;border-color:#143f73}
+
+@media (max-width:620px){
+  .wrap{padding:0 18px}
+  .head{padding:16px 0 28px}
+  .aviso-priv{left:10px;right:10px;bottom:10px}
+  .aviso-priv button{flex:1 1 auto}
+}
+@media print{
+  .saltar,.volver,.idiomas,.aviso-priv{display:none}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .tabla{overflow:visible}
+  table{min-width:0}
+}
+</style>
+</head>
+
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="aviso-priv" id="aviso-privacidad" role="region" aria-label="Aviso de privacidad" hidden>
+  <p>Este sitio no usa cookies de seguimiento ni rastrea a los visitantes. Solo tiene un contador de visitas agregado, sin cookies y sin guardar tu dirección IP. <a href="#contador">Más información</a></p>
+  <button type="button" id="aviso-cerrar">Entendido</button>
+</div>
+
+<header class="head">
+  <div class="wrap">
+    <a class="volver" href="/">← Volver</a>
+    <h1>Política de privacidad</h1>
+    <p class="sub">santiagorf.com</p>
+    <p class="fechado">Última actualización: 13 de noviembre de 2026</p>
+    <nav class="idiomas" aria-label="Idiomas de esta página">
+      <a href="#es">Español</a>
+      <a href="#en" lang="en" hreflang="en">English version</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="wrap">
+
+<article class="doc es" id="es" lang="es">
+
+  <div class="resumen">
+    <h2 style="margin-top:4px">En pocas palabras</h2>
+    <ul>
+      <li>Esta web no usa cookies, publicidad ni analítica de terceros.</li>
+      <li>Tiene un contador de visitas propio que nunca guarda tu dirección IP y que respeta las señales «Do Not Track» y Global Privacy Control de tu navegador.</li>
+      <li>No vendemos ni compartimos datos personales, y no los usamos para publicidad ni para elaborar perfiles.</li>
+      <li>Puedes ejercer tus derechos escribiendo a santiagorfernandezcv@gmail.com.</li>
+    </ul>
+  </div>
+
+  <h2>1. Quién es el responsable de tus datos</h2>
+  <p>El responsable del tratamiento es:</p>
+  <ul>
+    <li><strong>Santiago Reguero Fernández</strong>, persona física, con residencia en Madrid (España).</li>
+    <li>Correo de contacto: <a href="mailto:santiagorfernandezcv@gmail.com"><strong>santiagorfernandezcv@gmail.com</strong></a></li>
+  </ul>
+  <p>No hay Delegado de Protección de Datos, porque en este caso no es obligatorio (art. 37 RGPD).</p>
+
+  <h2>2. Qué cubre esta política</h2>
+  <p>Esta política cubre la web <strong>https://santiagorf.com</strong>, una web personal. Está redactada conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD).</p>
+
+  <h2>3. Qué datos tratamos y para qué</h2>
+
+  <h3>3.1 Cuando visitas la web</h3>
+  <p>La web es un sitio estático alojado en <strong>GitHub Pages</strong>. Para servirte las páginas, GitHub recibe datos técnicos de tu conexión, como tu dirección IP. GitHub indica que registra y guarda la dirección IP de quienes visitan sitios de GitHub Pages con fines de seguridad. Nosotros no tenemos acceso a esos registros. GitHub los trata según su propia <a href="https://docs.github.com/es/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">declaración de privacidad</a>.</p>
+  <p>La web no tiene registro de usuarios, formularios de contacto, publicidad ni analítica de terceros.</p>
+
+  <h3 id="contador">3.2 Contador de visitas</h3>
+  <p>La web tiene un contador de visitas propio, que solo sirve para saber cuánta gente la visita de forma agregada. Funciona sin cookies y no guarda ni lee nada en tu dispositivo.</p>
+  <p>De cada visitante guarda:</p>
+  <ul>
+    <li>Un <strong>hash irreversible de la dirección IP</strong> (HMAC-SHA256 con una clave secreta). La dirección IP nunca se guarda. No podemos convertir el hash de nuevo en una dirección IP. En las direcciones IPv6 solo se usa el prefijo de red (/64), no la dirección completa.</li>
+    <li>La fecha de la primera visita y la de la última.</li>
+    <li>El número de visitas.</li>
+    <li>El país, como código de dos letras (por ejemplo, «ES»).</li>
+  </ul>
+  <p>Además guarda totales diarios (cuántas visitas y cuántos visitantes nuevos hubo cada día), que no identifican a nadie.</p>
+  <p>El contador funciona en <strong>Cloudflare Workers</strong> y guarda sus datos en una base de datos de Cloudflare. Cloudflare necesita ver tu dirección IP un instante para responder a la petición, y es quien aporta el código de país.</p>
+  <p><strong>Respeta «Do Not Track» y Global Privacy Control.</strong> Si tu navegador envía la señal «Do Not Track» o la de Global Privacy Control, tu visita no se cuenta y no se guarda nada.</p>
+  <p>Aunque el hash no se puede revertir, lo tratamos como dato personal (dato seudonimizado) y lo protegemos como tal.</p>
+
+  <h2>4. Qué no hacemos</h2>
+  <ul>
+    <li>No usamos cookies ni otras técnicas para seguirte por esta web o por otras.</li>
+    <li>No vendemos, alquilamos ni compartimos datos personales con terceros para sus propios fines.</li>
+    <li>No usamos los datos para publicidad, elaboración de perfiles ni decisiones automatizadas (art. 22 RGPD).</li>
+  </ul>
+
+  <h2>5. Base jurídica</h2>
+  <div class="tabla" tabindex="0" role="region" aria-label="Base jurídica de cada tratamiento">
+    <table>
+      <thead><tr><th scope="col">Tratamiento</th><th scope="col">Finalidad</th><th scope="col">Base jurídica</th></tr></thead>
+      <tbody>
+        <tr><td>Alojamiento y entrega de la web</td><td>Mostrarte la web y mantenerla segura</td><td>Interés legítimo (art. 6.1.f RGPD)</td></tr>
+        <tr><td>Contador de visitas</td><td>Medir la audiencia de forma agregada</td><td>Interés legítimo (art. 6.1.f RGPD). El impacto para ti es mínimo: sin cookies, sin dirección IP guardada, sin perfiles y con un plazo de conservación limitado. Puedes oponerte en cualquier momento (apartado 8).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>6. Quién más trata los datos y transferencias internacionales</h2>
+  <p>Usamos estos proveedores. No entregamos datos a nadie más, salvo obligación legal.</p>
+  <div class="tabla" tabindex="0" role="region" aria-label="Proveedores que tratan datos">
+    <table>
+      <thead><tr><th scope="col">Proveedor</th><th scope="col">Papel</th><th scope="col">Datos</th><th scope="col">Ubicación y garantías</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cloudflare, Inc.</strong> (Cloudflare Workers)</td><td>Encargado del tratamiento. Ejecuta el contador de visitas.</td><td>Datos del contador (apartado 3.2)</td><td>Estados Unidos y la red global de Cloudflare. Cloudflare está certificada en el Marco de Privacidad de Datos UE-EE. UU. y su <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" rel="noopener">acuerdo de encargo de tratamiento</a> incluye las cláusulas contractuales tipo de la Comisión Europea.</td></tr>
+        <tr><td><strong>GitHub, Inc.</strong> (GitHub Pages)</td><td>Aloja la web. Trata sus propios registros de servidor según su propia declaración de privacidad.</td><td>Dirección IP y datos técnicos de la conexión</td><td>Estados Unidos. GitHub está certificada en el Marco de Privacidad de Datos UE-EE. UU. y usa cláusulas contractuales tipo. <a href="https://docs.github.com/es/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">Declaración de privacidad de GitHub</a>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>7. Cuánto tiempo conservamos los datos</h2>
+  <div class="tabla" tabindex="0" role="region" aria-label="Plazos de conservación">
+    <table>
+      <thead><tr><th scope="col">Datos</th><th scope="col">Conservación</th></tr></thead>
+      <tbody>
+        <tr><td>Registros del contador de visitas</td><td>12 meses como máximo. Después se borran o se conservan solo como totales que no identifican a nadie.</td></tr>
+        <tr><td>Registros de servidor de GitHub</td><td>Lo decide GitHub según su propia política.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>8. Tus derechos</h2>
+  <p>Tienes derecho a:</p>
+  <ul>
+    <li><strong>Acceder</strong> a tus datos.</li>
+    <li><strong>Rectificar</strong> los datos que sean incorrectos.</li>
+    <li><strong>Suprimir</strong> tus datos.</li>
+    <li><strong>Oponerte</strong> a los tratamientos basados en interés legítimo, como el contador de visitas.</li>
+    <li><strong>Limitar</strong> el tratamiento.</li>
+    <li><strong>La portabilidad</strong> de tus datos, cuando proceda.</li>
+  </ul>
+  <p>Para ejercerlos, escribe a <a href="mailto:santiagorfernandezcv@gmail.com"><strong>santiagorfernandezcv@gmail.com</strong></a> e indica qué derecho quieres ejercer. Es gratuito. Responderemos en el plazo de un mes (art. 12 RGPD). Si tenemos dudas razonables sobre tu identidad, podremos pedirte la información mínima necesaria para confirmarla. Si nos escribes, tratamos tu dirección de correo y tu mensaje (el buzón es de Gmail, de Google) solo para atender tu solicitud.</p>
+  <p><strong>Sobre el contador de visitas:</strong> como no guardamos tu dirección IP, normalmente no podemos saber qué registro es el tuyo (art. 11 RGPD). Si nos indicas la dirección IP desde la que visitaste la web, intentaremos localizar el registro correspondiente y borrarlo.</p>
+  <p>También tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: <a href="https://www.aepd.es" rel="noopener">https://www.aepd.es</a>. Si vives en otro país de la UE, puedes acudir a la autoridad de tu país.</p>
+
+  <h2>9. Cookies y almacenamiento local</h2>
+  <p>Esta web <strong>no usa cookies</strong>, ni propias ni de terceros. El contador de visitas no guarda ni lee nada en tu dispositivo. Por eso no pedimos consentimiento de cookies: no hay ninguna que aceptar o rechazar.</p>
+  <p>El aviso informativo de privacidad que aparece al entrar se puede cerrar con el botón «Entendido». Para no volver a mostrártelo, la web guarda entonces en el almacenamiento local de tu navegador (<code>localStorage</code>) una marca técnica llamada <code>sr_aviso_privacidad</code>. No es una cookie: no se envía a ningún servidor, no contiene ningún identificador y no sirve para reconocerte. Puedes borrarla cuando quieras desde los ajustes de tu navegador (borrar los datos del sitio).</p>
+
+  <h2>10. Cambios en esta política</h2>
+  <p>Si cambia la forma en que tratamos los datos, actualizaremos esta página y la fecha del principio.</p>
+
+  <h2>11. Idioma</h2>
+  <p>Esta política se publica en español y en inglés. Si hay diferencias entre las dos versiones, prevalece la versión en español.</p>
+
+</article>
+
+<article class="doc en" id="en" lang="en">
+
+  <h2 class="doc-t">Privacy Policy</h2>
+  <p class="doc-f"><strong>santiagorf.com</strong> · Last updated: 13 November 2026</p>
+
+  <div class="resumen" style="margin-top:18px">
+    <h3 style="margin-top:4px">In short</h3>
+    <ul>
+      <li>This website does not use cookies, advertising or third-party analytics.</li>
+      <li>It has its own visit counter that never stores your IP address and that honours your browser's "Do Not Track" and Global Privacy Control signals.</li>
+      <li>We do not sell or share personal data, and we do not use it for advertising or profiling.</li>
+      <li>You can exercise your rights by writing to santiagorfernandezcv@gmail.com.</li>
+    </ul>
+  </div>
+
+  <h3>1. Who is responsible for your data</h3>
+  <p>The data controller is:</p>
+  <ul>
+    <li><strong>Santiago Reguero Fernández</strong>, a private individual based in Madrid, Spain.</li>
+    <li>Contact email: <a href="mailto:santiagorfernandezcv@gmail.com"><strong>santiagorfernandezcv@gmail.com</strong></a></li>
+  </ul>
+  <p>There is no Data Protection Officer, because one is not required in this case (Article 37 GDPR).</p>
+
+  <h3>2. What this policy covers</h3>
+  <p>This policy covers the website <strong>https://santiagorf.com</strong>, a personal site. It is written under Regulation (EU) 2016/679 (GDPR) and the Spanish Organic Law 3/2018 (LOPDGDD).</p>
+
+  <h3>3. What data we process and why</h3>
+
+  <h4>3.1 When you visit the website</h4>
+  <p>The website is a static site hosted on <strong>GitHub Pages</strong>. To deliver the pages, GitHub receives technical data from your connection, such as your IP address. GitHub states that it logs and stores the IP address of visitors to GitHub Pages sites for security purposes. We do not have access to those logs. GitHub handles them under its own <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">privacy statement</a>.</p>
+  <p>The website has no registration, no contact forms, no advertising and no third-party analytics.</p>
+
+  <h4 id="counter">3.2 Visit counter</h4>
+  <p>The website has its own visit counter, used only to know how many people visit the site in aggregate. It works without cookies and does not store or read anything on your device.</p>
+  <p>For each visitor it keeps:</p>
+  <ul>
+    <li>A <strong>one-way hash of the IP address</strong> (HMAC-SHA256 with a secret key). The IP address itself is never stored. We cannot turn the hash back into an IP address. For IPv6 addresses only the network prefix (/64) is used, not the full address.</li>
+    <li>The date of the first visit and of the last visit.</li>
+    <li>The number of visits.</li>
+    <li>The country, as a two-letter code (for example, "ES").</li>
+  </ul>
+  <p>It also keeps daily totals (how many visits and how many new visitors there were each day), which identify no one.</p>
+  <p>The counter runs on <strong>Cloudflare Workers</strong> and stores its data in a Cloudflare database. Cloudflare needs to see your IP address for an instant in order to answer the request, and it provides the country code.</p>
+  <p><strong>It honours "Do Not Track" and Global Privacy Control.</strong> If your browser sends the "Do Not Track" or the Global Privacy Control signal, your visit is not counted and nothing is stored.</p>
+  <p>Although the hash cannot be reversed, we treat it as personal data (pseudonymised data) and protect it accordingly.</p>
+
+  <h3>4. What we do not do</h3>
+  <ul>
+    <li>We do not use cookies or other techniques to follow you around this website or others.</li>
+    <li>We do not sell, rent or share personal data with third parties for their own purposes.</li>
+    <li>We do not use the data for advertising, profiling or automated decisions (Article 22 GDPR).</li>
+  </ul>
+
+  <h3>5. Legal basis</h3>
+  <div class="tabla" tabindex="0" role="region" aria-label="Legal basis for each processing activity">
+    <table>
+      <thead><tr><th scope="col">Processing</th><th scope="col">Purpose</th><th scope="col">Legal basis</th></tr></thead>
+      <tbody>
+        <tr><td>Hosting and delivery of the website</td><td>To show you the website and keep it secure</td><td>Legitimate interest (Article 6(1)(f) GDPR)</td></tr>
+        <tr><td>Visit counter</td><td>To measure the audience in aggregate</td><td>Legitimate interest (Article 6(1)(f) GDPR). The impact on you is minimal: no cookies, no stored IP address, no profiles, and a limited retention period. You can object at any time (see section 8).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>6. Who else handles the data, and international transfers</h3>
+  <p>We use these providers. We do not give data to anyone else, unless the law requires it.</p>
+  <div class="tabla" tabindex="0" role="region" aria-label="Providers that handle data">
+    <table>
+      <thead><tr><th scope="col">Provider</th><th scope="col">Role</th><th scope="col">Data</th><th scope="col">Location and safeguards</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cloudflare, Inc.</strong> (Cloudflare Workers)</td><td>Data processor. Runs the visit counter.</td><td>Counter data (section 3.2)</td><td>United States and Cloudflare's global network. Cloudflare is certified under the EU-U.S. Data Privacy Framework and its <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" rel="noopener">data processing agreement</a> includes the European Commission's Standard Contractual Clauses.</td></tr>
+        <tr><td><strong>GitHub, Inc.</strong> (GitHub Pages)</td><td>Hosts the website. It handles its own server logs under its own privacy statement.</td><td>IP address and technical connection data</td><td>United States. GitHub is certified under the EU-U.S. Data Privacy Framework and uses Standard Contractual Clauses. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub privacy statement</a>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>7. How long we keep the data</h3>
+  <div class="tabla" tabindex="0" role="region" aria-label="Retention periods">
+    <table>
+      <thead><tr><th scope="col">Data</th><th scope="col">Retention</th></tr></thead>
+      <tbody>
+        <tr><td>Visit counter records</td><td>12 months at most. After that they are deleted or kept only as totals that identify no one.</td></tr>
+        <tr><td>GitHub server logs</td><td>Decided by GitHub under its own policy.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>8. Your rights</h3>
+  <p>You have the right to:</p>
+  <ul>
+    <li><strong>Access</strong> your data.</li>
+    <li><strong>Rectify</strong> data that is wrong.</li>
+    <li><strong>Erase</strong> your data.</li>
+    <li><strong>Object</strong> to processing based on legitimate interest, such as the visit counter.</li>
+    <li><strong>Restrict</strong> the processing.</li>
+    <li><strong>Data portability</strong>, where it applies.</li>
+  </ul>
+  <p>To exercise them, write to <a href="mailto:santiagorfernandezcv@gmail.com"><strong>santiagorfernandezcv@gmail.com</strong></a> and tell us which right you want to exercise. It is free. We will answer within one month (Article 12 GDPR). If we have reasonable doubts about who you are, we may ask for the minimum information needed to confirm it. If you write to us, we process your email address and your message (the mailbox is Gmail, by Google) only to deal with your request.</p>
+  <p><strong>About the visit counter:</strong> since we do not keep your IP address, we normally cannot tell which record is yours (Article 11 GDPR). If you give us the IP address you visited from, we will try to find the matching record and delete it.</p>
+  <p>You also have the right to lodge a complaint with the Spanish Data Protection Agency (Agencia Española de Protección de Datos, <strong>AEPD</strong>): <a href="https://www.aepd.es" rel="noopener">https://www.aepd.es</a>. If you live in another EU country, you can go to your local authority instead.</p>
+
+  <h3>9. Cookies and local storage</h3>
+  <p>This website <strong>does not use cookies</strong>, neither its own nor third-party ones. The visit counter does not store or read anything on your device. That is why we do not ask for cookie consent: there is nothing to accept or reject.</p>
+  <p>The informational privacy notice shown when you arrive can be closed with the "Entendido" (Got it) button. So that it is not shown to you again, the website then saves a technical flag called <code>sr_aviso_privacidad</code> in your browser's local storage (<code>localStorage</code>). It is not a cookie: it is not sent to any server, it contains no identifier and it cannot be used to recognise you. You can delete it whenever you want from your browser settings (clear site data).</p>
+
+  <h3>10. Changes to this policy</h3>
+  <p>If the way we handle data changes, we will update this page and change the date at the top.</p>
+
+  <h3>11. Language</h3>
+  <p>This policy is published in Spanish and English. If the two versions differ, the Spanish version prevails.</p>
+
+</article>
+
+</div>
+</main>
+
+<footer class="cierre">
+  <div class="wrap">
+    <nav class="legal" aria-label="Enlaces del sitio">
+      <a href="/">Inicio</a>
+      <a href="/privacidad/" aria-current="page">Privacidad</a>
+    </nav>
+    <p class="pie">Santiago Reguero Fernández — Madrid, España.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var CLAVE = "sr_aviso_privacidad";
+  var aviso = document.getElementById("aviso-privacidad");
+  var boton = document.getElementById("aviso-cerrar");
+  if (!aviso || !boton) return;
+  var visto = false;
+  try { visto = window.localStorage.getItem(CLAVE) === "1"; } catch (e) {}
+  if (visto) return;
+  aviso.hidden = false;
+  boton.addEventListener("click", function () {
+    aviso.hidden = true;
+    try { window.localStorage.setItem(CLAVE, "1"); } catch (e) {}
+  });
+})();
+</script>
+
+</body>
+</html>

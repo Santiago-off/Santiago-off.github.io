@@ -1,0 +1,27 @@
+# Santiago Reguero Fernández
+
+> Desarrollador full stack de Madrid (19 años), estudiante de Desarrollo de Aplicaciones Web (DAW) en DigitechFP y cofundador de VoltX, un optimizador de PC para gaming con más de 10.000 usuarios registrados. Se especializa en seguridad y control de acceso en aplicaciones web y publica vídeos de tecnología y seguridad. Busca prácticas (FCT) presenciales en Madrid desde marzo de 2027. Idioma del sitio: español (es-ES).
+
+Nota de precisión: en VoltX, Santiago Reguero Fernández se ocupa de la plataforma (web, base de datos y permisos, paneles internos, pagos e infraestructura); no desarrolla la app de escritorio, que hace otra persona del equipo. En sus vídeos firma solo "Santiago".
+
+## Sobre él
+- [Portafolio y CV](https://santiagorf.com/): perfil completo, experiencia, formación, proyectos y certificados.
+- [CV en PDF](https://santiagorf.com/CV_Visual_Santiago_Reguero_Fernandez.pdf): currículum descargable.
+
+## Perfiles
+- [LinkedIn](https://www.linkedin.com/in/santiago-reguero-fernandez)
+- [GitHub](https://github.com/Santiago-off)
+- [YouTube](https://www.youtube.com/channel/UCduNhqsbJAnlUxpwcamI_6w)
+- [Instagram @santiagorfer](https://www.instagram.com/santiagorfer)
+- [TikTok @santiagorfoff](https://www.tiktok.com/@santiagorfoff)
+
+## Proyectos
+- [VoltX](https://voltx.world): optimizador de PC para gaming en Windows (cofundador).
+- [Panel de soporte multi-rol con auditoría inmutable](https://github.com/Santiago-off/panelweb.github.io): React, Firebase, Firestore Rules.
+- [Portal de clientes con seguridad a nivel de fila](https://github.com/Santiago-off/Mad): Next.js, Supabase, PostgreSQL RLS.
+- [¿Es fraude?](https://esfraude.pages.dev): detector de phishing en SMS y emails, 100 % en el navegador, basado en indicadores de INCIBE y la OSI.
+- [Enredo](https://enredo.pages.dev): analizador de red local con foro (código abierto, MIT).
+- [Chataliza](https://chataliza.pages.dev): analizador de chats de WhatsApp en el navegador (código abierto, MIT).
+
+## Optional
+- [Certificados](https://santiagorf.com/#certificados): UNIR (Cloud AWS y Azure), Cisco, Santander/Google, BIG school, AESA.
